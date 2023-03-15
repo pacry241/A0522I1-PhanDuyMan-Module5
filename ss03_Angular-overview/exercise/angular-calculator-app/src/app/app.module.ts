@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalculatorComponent } from './component/calculator/calculator.component';
 import {FormsModule} from "@angular/forms";
+import { ColorPickerComponent } from './component/color-picker/color-picker.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    ColorPickerComponent
   ],
   imports: [
     BrowserModule,
