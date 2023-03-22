@@ -1,0 +1,26 @@
+<h3>Form dang nhap nguoi dung </h3>
+<form [formGroup]="signForm" (ngSubmit)="addNew()">
+  <table>
+    <tr>
+      <td><label>Email</label></td>
+      <td><input type="text" formControlName="email"><br></td>
+      <td><div style="color: red" *ngIf="!signForm.controls.email.valid && (signForm.controls.email.dirty || signForm.controls.email.touched)">
+        <span *ngIf="signForm.controls.email.hasError('required')">Hay nhap email cua ban </span>
+        <span *ngIf="signForm.controls.email.hasError('email')">Email cua ban khong dung dinh dang</span>
+      </div></td>
+    </tr>
+    <tr>
+      <td><label>Password</label></td>
+      <td><input type="password" formControlName="password"></td>
+      <td><div style="color: red" *ngIf="!signForm.controls.password.valid && (signForm.controls.password.dirty || signForm.controls.password.touched)">
+        <span *ngIf="signForm.controls.password.hasError('required')">Nhap mat khau cua ban</span>
+        <span *ngIf="signForm.controls.password.hasError('minlength')">Mat khau khong it hon 6 ky tu</span>
+      </div></td>
+    </tr>
+    <tr>
+      <td><button type="reset" value="reset">Reset</button>
+        <button type="submit" value="submit">Submit</button>
+      </td>
+    </tr>
+  </table>
+</form>

@@ -1,0 +1,61 @@
+<h3>Form dang ky nguoi dung </h3>
+<form [formGroup]="reactiveForm" (ngSubmit)="addNew()">
+  <table>
+    <tr>
+      <td><label>Email</label></td>
+      <td><input type="text" formControlName="email"><br></td>
+      <td><div style="color: red" *ngIf="!reactiveForm.controls.email.valid && (reactiveForm.controls.email.dirty || reactiveForm.controls.email.touched)">
+        <span *ngIf="reactiveForm.controls.email.hasError('required')">Hay nhap email cua ban </span>
+        <span *ngIf="reactiveForm.controls.email.hasError('email')">Email cua ban khong dung dinh dang</span>
+      </div></td>
+    </tr>
+    <tr>
+      <td><label>Password</label></td>
+      <td><input type="password" formControlName="password"></td>
+      <td><div style="color: red" *ngIf="!reactiveForm.controls.password.valid && (reactiveForm.controls.password.dirty || reactiveForm.controls.password.touched)">
+              <span *ngIf="reactiveForm.controls.password.hasError('required')">Nhap mat khau cua ban</span>
+              <span *ngIf="reactiveForm.controls.password.hasError('minlength')">Mat khau khong it hon 6 ky tu</span>
+      </div></td>
+    </tr>
+    <tr>
+      <td><label>Confirm password</label></td>
+      <td><input type="password" formControlName="confirmPassword"></td>
+      <td>
+          <div style="color: red" *ngIf="!reactiveForm.controls.confirmPassword.valid && (reactiveForm.controls.confirmPassword.dirty || reactiveForm.controls.confirmPassword.touched)">
+            <span *ngIf="reactiveForm.controls.confirmPassword.hasError('required')">Nhap mat khau cua ban</span>
+            <span *ngIf="reactiveForm.controls.confirmPassword.hasError('minlength')">Mat khau khong it hon 6 ky tu</span>
+            <span *ngIf="reactiveForm.controls.confirmPassword"> Mat khau nhap lai khong khop</span>
+          </div>
+      </td>
+    </tr>
+    <tr>
+      <td><label>Age</label></td>
+      <td><input type="number" formControlName="age"></td>
+      <td><div style="color: red" *ngIf="!reactiveForm.controls.age.valid && (reactiveForm.controls.age.dirty || reactiveForm.controls.age.touched)">
+        <span *ngIf="reactiveForm.controls.age.hasError('required')">Hay nhap tuoi cua ban </span>
+        <span *ngIf="reactiveForm.controls.age.hasError('min')">Tuoi cua ban khong phu hop</span>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td><label>Gender</label></td>
+      <td><input class="form-check-input" type="radio" [value]="1" formControlName="gender" name="gender">Male<br>
+          <input class="form-check-input" type="radio" [value]="0" formControlName="gender" name="gender">FeMale</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><label>Phone</label></td>
+      <td><input type="text" formControlName="phone"></td>
+      <td><div style="color: red" *ngIf="!reactiveForm.controls.phone.valid && (reactiveForm.controls.phone.dirty || reactiveForm.controls.phone.touched)">
+        <span *ngIf="reactiveForm.controls.phone.hasError('required')">Hay nhap so dien thoai cua ban </span>
+        <span *ngIf="reactiveForm.controls.phone.hasError('pattern')">So dien thoai cua ban khong dung</span>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td><button type="reset" value="reset">Reset</button>
+        <button type="submit" value="submit">Submit</button>
+      </td>
+    </tr>
+  </table>
+</form>
