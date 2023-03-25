@@ -1,0 +1,14 @@
+<table border="1px">
+  <tr>
+    <th>STT</th>
+    <th>Tu Vung</th>
+    <th>Nghia</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let temp of dictionarys; index as i ">
+    <td>{{i + 1}}</td>
+    <td>{{temp.word}}</td>
+    <td>{{temp.mean}}</td>
+    <td><a routerLink=""></a></td>
+  </tr>
+</table>
