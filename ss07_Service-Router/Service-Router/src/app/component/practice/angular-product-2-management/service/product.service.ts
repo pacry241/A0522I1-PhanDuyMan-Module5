@@ -5,7 +5,7 @@ import {Product} from "../model/product";
   providedIn: 'root'
 })
 export class ProductService {
-  products: Product[] = [{
+  private _productList:Product[] =[{
     id: 1,
     name: 'IPhone 12',
     price: 2400000,
@@ -33,11 +33,23 @@ export class ProductService {
   }];
   constructor() { }
 
-  getAll() {
-    return this.products;
+  getProductList(): Product[] {
+    return this._productList;
   }
 
-  saveProduct(product) {
-    this.products.push(product);
+  setProductList(value: Product[]) {
+    this._productList = value;
+  }
+
+  getFindByIndex(index:number){
+    return this._productList[index];
+  }
+
+  save(product:Product){
+    this._productList.unshift(product);
+  }
+  delete(product:Product){
+    const index = this._productList.indexOf(product);
+    this._productList.splice(index,1);
   }
 }

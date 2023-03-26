@@ -1,15 +1,31 @@
-<h1>Danh sách sản phẩm</h1>
-<table border="1px">
-  <tr>
-    <td>STT</td>
-    <td>Tên</td>
-    <td>Giá</td>
-    <td>Mô tả</td>
-  </tr>
-  <tr *ngFor="let product of products; index as i">
-    <td>{{i + 1}}</td>
-    <td>{{product.name}}</td>
-    <td>{{product.price}}</td>
-    <td>{{product.description}}</td>
-  </tr>
-</table>
+<div class="row">
+  <div class="col-12">
+    <div class="card boder-primary">
+      <h3 class="card-header bg-primary">List</h3>
+      <div>
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Detail</th>
+            <th>Delete</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let item of productList;let i = index">
+            <td>{{i+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td >{{item.description}}</td>
+            <td ><button (click)="detailProduct(i)">Detail</button></td>
+<!--            <td ><button (click)="clickDelete(i)">Delete</button></td>-->
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

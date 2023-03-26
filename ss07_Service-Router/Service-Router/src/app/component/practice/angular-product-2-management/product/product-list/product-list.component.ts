@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductService} from "../../service/product.service";
 import {Product} from "../../model/product";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-product-list',
@@ -8,17 +9,16 @@ import {Product} from "../../model/product";
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  products: Product[] = [];
+  productList:Product[];
 
-
-  constructor(private productService: ProductService ) {
-    this.getAll();
-  }
+  constructor(private _productService:ProductService,
+              private _router:Router) { }
 
   ngOnInit(): void {
-    // this.getAll();
+    this.productList=this._productService.getProductList();
   }
-  getAll() {
-    this.products = this.productService.getAll();
+
+  detailProduct(i:number){
+    this._router.navigate(['detail',i]);
   }
 }

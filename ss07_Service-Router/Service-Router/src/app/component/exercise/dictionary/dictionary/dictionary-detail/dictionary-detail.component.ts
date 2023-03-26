@@ -16,7 +16,7 @@ export class DictionaryDetailComponent implements OnInit {
     this.activatedRoute.paramMap.subscribe(next =>{
       const temp = next.get('word');
       if (temp != null){
-        word = this.dictionaryService.translate(temp);
+        this.word = this.dictionaryService.translate(temp);
       }
     },error =>{} ,()=>{})
   }

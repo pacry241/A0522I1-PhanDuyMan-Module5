@@ -1,0 +1,64 @@
+<div class="row">
+  <div class="card border-success">
+    <h3 class="card-header bg success">Create</h3>
+    <div class="card-body">
+      <form [formGroup]="rfProduct" (ngSubmit)="onSubmit()" novalidate autocomplete="off">
+        <div class="mb-3">
+          <label class="form-label">ID</label>
+          <input formControlName="id"  type="number" class="form-control" id="id"
+                 [ngClass]="rfProduct.controls['id'].invalid? 'is-invalid':'is-valid'">
+          <div class="invalid-feedback is-invalid"
+               *ngIf="rfProduct.controls['id'].invalid &&(rfProduct.controls['id'].dirty||rfProduct.controls['id'].touched)">
+            <div *ngIf="rfProduct.controls['id'].hasError('required')">
+              id không được bỏ trống
+            </div>
+        </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Product Name</label>
+          <input formControlName="name"  type="email" class="form-control" id="name"
+                 [ngClass]="rfProduct.controls['name'].invalid? 'is-invalid':'is-valid'">
+          <div class="invalid-feedback is-invalid"
+               *ngIf="rfProduct.controls['name'].invalid &&(rfProduct.controls['name'].dirty||rfProduct.controls['name'].touched)">
+            <div *ngIf="rfProduct.controls['name'].hasError('required')">
+              Tên không được bỏ trống
+            </div>
+            <div *ngIf="rfProduct.controls['name'].hasError('minlength')">
+              Tên phải có độ dài lớn hơn 5 kí tự
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Price</label>
+          <input formControlName="price" type="number" class="form-control"
+                 [ngClass]="rfProduct.controls['price'].invalid? 'is-invalid':'is-valid'">
+          <div class="invalid-feedback is-invalid"
+               *ngIf="rfProduct.controls['price'].invalid &&(rfProduct.controls['price'].dirty||rfProduct.controls['price'].touched)">
+            <div *ngIf="rfProduct.controls['price'].hasError('required')">
+              Điểm không được bỏ trống
+            </div>
+            <div *ngIf="rfProduct.controls['price'].hasError('min')">
+              Điểm phải lớn hơn 0
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <input formControlName="description" type="text" class="form-control"
+                 [ngClass]="rfProduct.controls['description'].invalid? 'is-invalid':'is-valid'">
+          <div class="invalid-feedback is-invalid"
+               *ngIf="rfProduct.controls['description'].invalid &&(rfProduct.controls['description'].dirty||rfProduct.controls['description'].touched)">
+            <div *ngIf="rfProduct.controls['description'].hasError('required')">
+              Mô tả không được bỏ trống
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+

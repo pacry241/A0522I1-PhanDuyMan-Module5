@@ -6,6 +6,10 @@ import {YoutubePlayerComponent} from "./component/practice/angular-product-manag
 import {ProductListComponent} from "./component/practice/angular-product-2-management/product/product-list/product-list.component";
 import {ProductCreateComponent} from "./component/practice/angular-product-2-management/product/product-create/product-create.component";
 import {DictionaryPageComponent} from "./component/exercise/dictionary/dictionary/dictionay-page/dictionary-page.component";
+import {ProductDetailComponent} from "./component/practice/angular-product-2-management/product/product-detail/product-detail.component";
+import {ProductDeleteComponent} from "./component/practice/angular-product-2-management/product/product-delete/product-delete.component";
+import {ProductUpdateComponent} from "./component/practice/angular-product-2-management/product/product-update/product-update.component";
+import {DictionaryDetailComponent} from "./component/exercise/dictionary/dictionary/dictionary-detail/dictionary-detail.component";
 
 
 const routes: Routes = [
@@ -21,15 +25,13 @@ const routes: Routes = [
       component: YoutubePlayerComponent
     }]
   },
-  {
-    path: 'product/list',
-    component: ProductListComponent
-  },
-  {
-    path: 'product/create',
-    component: ProductCreateComponent
-  },
-  {path: 'dictionary',component: DictionaryPageComponent}
+  {path:"list",component:ProductListComponent},
+  {path:"detail/:index",component:ProductDetailComponent},
+  {path:"delete/:index",component:ProductDeleteComponent},
+  {path:"update/:index",component:ProductUpdateComponent},
+  {path:"create",component:ProductCreateComponent},
+  {path: 'dictionary',component: DictionaryPageComponent},
+  {path: 'word/detail/:word', component: DictionaryDetailComponent}
 ];
 
 @NgModule({

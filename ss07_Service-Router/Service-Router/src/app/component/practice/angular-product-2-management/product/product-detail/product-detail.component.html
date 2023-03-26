@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-12">
+    <div class="class border-info">
+      <h3 class="card-header bg-info">Detail</h3>
+      <div class="card-body">
+        <div *ngIf="productDetail;else noData">
+          <div>
+            <div>Name :{{productDetail.name}}</div>
+          </div>
+          <div>
+            <div>Price :{{productDetail.price}}</div>
+          </div>
+          <div>
+            <div>Description :{{productDetail.description}}</div>
+          </div>
+        </div>
+        <ng-template #noData>
+          <p>No data</p>
+        </ng-template>
+        <button type="button" class="btn btn-primary" routerLink="/list">Back</button>
+      </div>
+    </div>
+  </div>
+</div>

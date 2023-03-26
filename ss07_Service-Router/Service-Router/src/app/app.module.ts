@@ -11,6 +11,9 @@ import { ProductCreateComponent } from './component/practice/angular-product-2-m
 import {ReactiveFormsModule} from "@angular/forms";
 import { DictionaryPageComponent } from './component/exercise/dictionary/dictionary/dictionay-page/dictionary-page.component';
 import { DictionaryDetailComponent } from './component/exercise/dictionary/dictionary/dictionary-detail/dictionary-detail.component';
+import { ProductDeleteComponent } from './component/practice/angular-product-2-management/product/product-delete/product-delete.component';
+import { ProductDetailComponent } from './component/practice/angular-product-2-management/product/product-detail/product-detail.component';
+import { ProductUpdateComponent } from './component/practice/angular-product-2-management/product/product-update/product-update.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { DictionaryDetailComponent } from './component/exercise/dictionary/dicti
     ProductListComponent,
     ProductCreateComponent,
     DictionaryPageComponent,
-    DictionaryDetailComponent
+    DictionaryDetailComponent,
+    ProductDeleteComponent,
+    ProductDetailComponent,
+    ProductUpdateComponent
   ],
   imports: [
     BrowserModule,

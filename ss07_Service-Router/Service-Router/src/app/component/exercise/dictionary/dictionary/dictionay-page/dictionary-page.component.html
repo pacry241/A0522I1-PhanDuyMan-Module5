@@ -9,6 +9,6 @@
     <td>{{i + 1}}</td>
     <td>{{temp.word}}</td>
     <td>{{temp.mean}}</td>
-    <td><a routerLink=""></a></td>
+    <td><a [routerLink]="['word/detail',temp.word]">Detail</a></td>
   </tr>
 </table>
