@@ -21,4 +21,6 @@ export class ProductListComponent implements OnInit {
   detailProduct(i:number){
     this._router.navigate(['detail',i]);
   }
+
+
 }

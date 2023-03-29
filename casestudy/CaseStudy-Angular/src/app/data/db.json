@@ -1,0 +1,69 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "nameCustomer": "Nguyen Van A",
+      "dateOfBirth": "1985-11-24",
+      "gender": "Male",
+      "cmnd": "123456789",
+      "phoneNumber": "0901952221",
+      "email": "vanA@gmail.com",
+      "customerType": "Diamond",
+      "address": "Da Nang"
+    },
+    {
+      "id": 2,
+      "nameCustomer": "Nguyen Van B",
+      "dateOfBirth": "1985-10-24",
+      "gender": "Male",
+      "cmnd": "201812792",
+      "phoneNumber": "0901952229",
+      "email": "vanB@gmail.com",
+      "customerType": "Platinium",
+      "address": "Da Nang"
+    },
+    {
+      "id": 3,
+      "nameCustomer": "Nguyen Van C",
+      "dateOfBirth": "1985-01-24",
+      "gender": "FeMale",
+      "cmnd": "201812792",
+      "phoneNumber": "0901952261",
+      "email": "vanC@gmail.com",
+      "customerType": "Gold",
+      "address": "Da Nang"
+    },
+    {
+      "id": 4,
+      "nameCustomer": "Nguyen Van D",
+      "dateOfBirth": "1985-11-24",
+      "gender": "Male",
+      "cmnd": "201812792",
+      "phoneNumber": "0901952221",
+      "email": "vanD@gmail.com",
+      "customerType": "Silver",
+      "address": "Da Nang"
+    },
+    {
+      "id": 5,
+      "nameCustomer": "Nguyen Van E",
+      "dateOfBirth": "1985-11-24",
+      "gender": "Male",
+      "cmnd": "201812792",
+      "phoneNumber": "0901952221",
+      "email": "vanE@gmail.com",
+      "customerType": "Member",
+      "address": "Da Nang"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

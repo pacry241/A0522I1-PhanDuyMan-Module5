@@ -1,0 +1,42 @@
+<!--<label>Id:</label>-->
+<!--<input [(ngModel)]="student.id"><br>-->
+<!--<label>Name:</label>-->
+<!--<input [(ngModel)]="student.name"><br>-->
+<!--<label>Date of birth:</label>-->
+<!--<input type="date" [(ngModel)]="student.dateOfBirth"><br>-->
+<!--<label>Point:</label>-->
+<!--<input type="number" [(ngModel)]="student.point"><br>-->
+<!--<button (click)="addStudent()">Thêm mới</button>-->
+
+<!--<form #templateForm ="ngForm" (ngSubmit)="addStudentTemplate(templateForm)">-->
+<!--<label>Id:</label>-->
+<!--<input type="text" ngModel name="id" required><br>-->
+<!--<label>Name:</label>-->
+<!--<input type="text" ngModel name="name"><br>-->
+<!--<label>Date of birth:</label>-->
+<!--<input type="date" ngModel name="dateOfBirth"><br>-->
+<!--<label>Point:</label>-->
+<!--<input type="number" ngModel name="point"><br>-->
+<!--<button type="submit">Thêm mới</button>-->
+<!--</form>-->
+
+<form [formGroup]="reactiveForm" (ngSubmit)="addStudentReactive()">
+  <label>Id </label>  <span style="color: red" *ngIf="reactiveForm.controls.id.hasError('required')&&reactiveForm.controls.id.dirty">không được để trống</span>
+  <br>
+  <input formControlName="id"><br>
+
+  <label>Name:</label>
+  <input formControlName="name"><br>
+  <p style="color: red" *ngIf="reactiveForm.controls.name.hasError('required')">Name không được để trống</p>
+  <p style="color: red" *ngIf="reactiveForm.controls.name.hasError('minlength')">Name không được ít hơn 3 ký tự</p>
+  <label>Date of birth:</label>
+  <input type="date" formControlName="dateOfBirth"><br>
+  <label>Point:</label>
+  <input type="number" formControlName="point"><br>
+  <p style="color: red" *ngIf="reactiveForm.controls.point.hasError('invalid0')">Point không được nhỏ hơn 0</p>
+  <label>Classroom: </label>
+  <select formControlName="classroom">
+    <option *ngFor="let classroom of classrooms" [ngValue]="classroom">{{classroom.nameClass}}</option>
+  </select>
+  <button type="submit">Thêm mới</button>
+</form>
