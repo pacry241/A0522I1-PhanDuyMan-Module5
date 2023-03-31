@@ -2,13 +2,16 @@
   "customers": [
     {
       "id": 1,
-      "nameCustomer": "Nguyen Van A",
+      "nameCustomer": "Nguyen Van Aa",
       "dateOfBirth": "1985-11-24",
       "gender": "Male",
       "cmnd": "123456789",
       "phoneNumber": "0901952221",
       "email": "vanA@gmail.com",
-      "customerType": "Diamond",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      },
       "address": "Da Nang"
     },
     {
@@ -19,7 +22,10 @@
       "cmnd": "201812792",
       "phoneNumber": "0901952229",
       "email": "vanB@gmail.com",
-      "customerType": "Platinium",
+      "customerType": {
+        "id": 2,
+        "name": "Platinium"
+      },
       "address": "Da Nang"
     },
     {
@@ -30,7 +36,10 @@
       "cmnd": "201812792",
       "phoneNumber": "0901952261",
       "email": "vanC@gmail.com",
-      "customerType": "Gold",
+      "customerType": {
+        "id": 3,
+        "name": "Gold"
+      },
       "address": "Da Nang"
     },
     {
@@ -41,7 +50,10 @@
       "cmnd": "201812792",
       "phoneNumber": "0901952221",
       "email": "vanD@gmail.com",
-      "customerType": "Silver",
+      "customerType": {
+        "id": 4,
+        "name": "Silver"
+      },
       "address": "Da Nang"
     },
     {
@@ -52,8 +64,103 @@
       "cmnd": "201812792",
       "phoneNumber": "0901952221",
       "email": "vanE@gmail.com",
-      "customerType": "Member",
+      "customerType": {
+        "id": 5,
+        "name": "Member"
+      },
       "address": "Da Nang"
+    },
+    {
+      "id": 6,
+      "nameCustomer": "Iphone13 Pro",
+      "dateOfBirth": "2023-03-02",
+      "gender": "Male",
+      "cmnd": "1234567899",
+      "phoneNumber": "09601920221",
+      "email": "phanduyman123@gmail.com",
+      "customerType": {
+        "id": 4,
+        "name": "Silver"
+      },
+      "address": "Da nang"
+    },
+    {
+      "id": 7,
+      "nameCustomer": "Nguyen Van F",
+      "dateOfBirth": "2023-03-02",
+      "gender": "Male",
+      "cmnd": "1234567899",
+      "phoneNumber": "09601920221",
+      "email": "NguyenVanF@gmail.com",
+      "customerType": {
+        "id": 5,
+        "name": "Member"
+      },
+      "address": "Da nang"
+    },
+    {
+      "id": 8,
+      "nameCustomer": "Le Van A",
+      "dateOfBirth": "2023-03-02",
+      "gender": "Male",
+      "cmnd": "1234567899",
+      "phoneNumber": "09601920221",
+      "email": "phanduyman123@gmail.com",
+      "customerType": {
+        "id": 5,
+        "name": "Member"
+      },
+      "address": "Da nang"
+    },
+    {
+      "id": 9,
+      "nameCustomer": "Le Van B",
+      "dateOfBirth": "2023-03-04",
+      "gender": "FeMale",
+      "cmnd": "1234567899",
+      "phoneNumber": "09601920221",
+      "email": "NguyenVanF@gmail.com",
+      "customerType": {
+        "id": 5,
+        "name": "Member"
+      },
+      "address": "Da nang"
+    },
+    {
+      "id": 10,
+      "nameCustomer": "Iphone13 Pro",
+      "dateOfBirth": "2023-03-02",
+      "gender": "Male",
+      "cmnd": "1234567899",
+      "phoneNumber": "09601920221",
+      "email": "phanduyman123@gmail.com",
+      "customerType": {
+        "id": 5,
+        "name": "Member"
+      },
+      "address": "Da nang"
+    }
+  ],
+  "customer-type": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinium"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
     }
   ],
   "comments": [

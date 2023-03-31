@@ -39,69 +39,77 @@
 <!--</div>-->
 
 <div class="container-fluid">
-      <div class="class border-info">
-        <h3 style="font-family: Comic Sans MS" class="card-header bg-info">Thông tin chi tiết của khách hàng {{customer.nameCustomer}}</h3>
-        <div class="card-body">
-   <form [formGroup]="detailForm">
-    <div class="form-group row">
-      <input id="id" class="form-control " formControlName="id" type="hidden" required>
+  <div class="class border-info">
+    <h3 style="font-family: Comic Sans MS" class="card-header bg-info">Thông tin chi tiết của khách
+      hàng {{customer.nameCustomer}}</h3>
+    <div class="card-body">
+      <form [formGroup]="detailForm">
+        <div class="form-group row">
+          <input id="id" class="form-control " formControlName="id" type="hidden" required>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label " for="name">Name :</label>
+          <div class="col-sm-10">
+            <input id="name" class="form-control-plaintext " disabled formControlName="nameCustomer" type="text"
+                   required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label" for="dateOfBirth">Date of birth :</label>
+          <div class="col-sm-10">
+            <input id="dateOfBirth" class="form-control-plaintext " disabled formControlName="dateOfBirth" type="email"
+                   required>
+          </div>
+        </div>
+        <div class="form-group row ">
+          <label class="col-sm-2 col-form-label" for="Gender">Gender :</label>
+          <div class="col-sm-10">
+            <input id="Gender" class="form-control-plaintext " disabled formControlName="gender" type="text" required>
+          </div>
+        </div>
+        <div class="form-group row ">
+          <label class="col-sm-2 col-form-label" for="cmnd">CMND :</label>
+          <div class="col-sm-10">
+            <input id="cmnd" class="form-control-plaintext " disabled formControlName="cmnd" type="text" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label" for="phone">Phone number :</label>
+          <div class="col-sm-10">
+            <input id="phone" class="form-control-plaintext " disabled formControlName="phoneNumber" type="text"
+                   required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label" for="email">Email :</label>
+          <div class="col-sm-10">
+            <input id="email" class="form-control-plaintext " disabled formControlName="email" type="text" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label" for="customerType">Customer Type :</label>
+          <div class="col-sm-10">
+            <input id="customerType" class="form-control-plaintext " disabled type="text"
+                   value="{{customer.customerType.name}}" required>
+<!--            <select formControlName="customerType" class="form-select" [compareWith]="compareFn">-->
+<!--              <option *ngFor="let customerType of customerTypes" [ngValue]="customerType">{{customerType.name}}</option>-->
+<!--            </select>-->
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label" for="address">Address :</label>
+          <div class="col-sm-10">
+            <input id="address" class="form-control-plaintext " disabled formControlName="address" type="text" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label"></label>
+          <div class="col-sm-10">
+            <button type="button" class="btn btn-primary" routerLink="/customer-list">Back</button>
+          </div>
+        </div>
+      </form>
     </div>
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label " for="name">Name :</label>
-      <div class="col-sm-10">
-        <input id="name" class="form-control-plaintext " disabled formControlName="nameCustomer" type="text" required>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label" for="dateOfBirth">Date of birth :</label>
-      <div class="col-sm-10">
-        <input id="dateOfBirth" class="form-control-plaintext " disabled formControlName="dateOfBirth" type="email"
-               required>
-      </div>
-    </div>
-    <div class="form-group row ">
-      <label class="col-sm-2 col-form-label" for="Gender">Gender :</label>
-      <div class="col-sm-10">
-        <input id="Gender" class="form-control-plaintext " disabled formControlName="gender" type="text" required>
-      </div>
-    </div>
-    <div class="form-group row ">
-      <label class="col-sm-2 col-form-label" for="cmnd">CMND :</label>
-      <div class="col-sm-10">
-        <input id="cmnd" class="form-control-plaintext " disabled formControlName="cmnd" type="text" required>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label" for="phone">Phone number :</label>
-      <div class="col-sm-10">
-        <input id="phone" class="form-control-plaintext " disabled formControlName="phoneNumber" type="text" required>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label" for="email">Email :</label>
-      <div class="col-sm-10">
-        <input id="email" class="form-control-plaintext " disabled formControlName="email" type="text" required>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label" for="customerType">Customer Type :</label>
-      <div class="col-sm-10">
-        <input id="customerType" class="form-control-plaintext " disabled formControlName="customerType" type="text"
-               required>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label" for="address">Address :</label>
-      <div class="col-sm-10">
-        <input id="address" class="form-control-plaintext " disabled formControlName="address" type="text" required>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label class="col-sm-2 col-form-label" ></label>
-      <div class="col-sm-10">
-        <button type="button" class="btn btn-primary" routerLink="/customer-list">Back</button>
-      </div>
-    </div>
-  </form>
+  </div>
 </div>
 

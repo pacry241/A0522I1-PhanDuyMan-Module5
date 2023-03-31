@@ -14,15 +14,20 @@ export class CustomerService {
   }
 
   getAll(): Observable<Customer[]> {
-    return this.httpClient.get("http://localhost:3000/customers").subscribe(next =>{
-      this.customers = next;
-    },error => {});
+    return this.httpClient.get<Customer[]>("http://localhost:3000/customers");
   }
 
-  // findById(id: number):  {
-  //   return this.customers.filter(customer => customer.id === id)[0];
-  // }
-  save(customer: Customer){
-    this.customers.push(customer);
+  findById(id: number):Observable<Customer> {
+      return this.httpClient.get<Customer>("http://localhost:3000/customers/" +id);
+  }
+  save(event: any): Observable<any> {
+    return this.httpClient.post<any>('http://localhost:3000/customers', event);
+  }
+  delete(id: number) : Observable<any> {
+    return this.httpClient.delete<any>('http://localhost:3000/customers/' + id);
+  }
+
+  editSave(event: any): Observable<any> {
+    return this.httpClient.patch<any>('http://localhost:3000/customers/' +event.id, event);
   }
 }

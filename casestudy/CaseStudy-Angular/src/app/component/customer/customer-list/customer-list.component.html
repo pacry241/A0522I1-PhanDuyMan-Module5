@@ -1,5 +1,8 @@
 <div class="container-fluid">
-<!--  <button class="btn btn-info" routerLink="/customer/create">Add New Customer</button>-->
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add new Customer
+  </button>
+
   <table class="table table-hover">
     <thead style="background: #48cfff">
     <tr>
@@ -24,14 +27,105 @@
       <td>{{customer.cmnd}}</td>
       <td>{{customer.phoneNumber}}</td>
       <td>{{customer.email}}</td>
-      <td>{{customer.customerType}}</td>
+      <td>{{customer.customerType.name}}</td>
       <td>{{customer.address}}</td>
       <td>
         <button class="btn btn-info" [routerLink]="['/detail', customer.id]">Detail</button>
-        <button class="btn btn-primary">Edit</button>
-        <button class="btn btn-danger">Delete</button>
+        <button class="btn btn-primary"[routerLink]="['/edit', customer.id]" >Edit</button>
+        <button class="btn btn-danger" (click)="remove(customer.id)">Delete</button>
       </td>
     </tr>
     </tbody>
   </table>
+</div>
+
+<!-- Modal create -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="class border-info">
+          <h3 style="font-family: Comic Sans MS" class="card-header bg-info">Add new Customer</h3>
+          <div class="card-body">
+            <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label " [hidden]="true" for="id">Id</label>
+                <div class="col-sm-10">
+                  <input id="id" class="form-control " [hidden]="true" formControlName="id" type="text" required>
+                </div>
+              </div><br>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label " for="name">Name</label>
+                <div class="col-sm-10">
+                  <input id="name" class="form-control " formControlName="nameCustomer" type="text" required>
+                </div>
+              </div><br>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="dateOfBirth">Date of birth</label>
+                <div class="col-sm-10">
+                  <input id="dateOfBirth" class="form-control" formControlName="dateOfBirth" type="date"
+                         required>
+                </div>
+              </div><br>
+              <div class="form-group row ">
+                <label class="col-sm-2 col-form-label" for="Gender">Gender</label>
+                <div class="col-sm-10">
+                  <input id="Gender" class="form-control " formControlName="gender" type="text" required>
+                </div>
+              </div><br>
+              <div class="form-group row ">
+                <label class="col-sm-2 col-form-label" for="cmnd">CMND</label>
+                <div class="col-sm-10">
+                  <input id="cmnd" class="form-control " formControlName="cmnd" type="text" required>
+                </div>
+              </div><br>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="phone">Phone number</label>
+                <div class="col-sm-10">
+                  <input id="phone" class="form-control " formControlName="phoneNumber" type="text" required>
+                </div>
+              </div><br>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="email">Email</label>
+                <div class="col-sm-10">
+                  <input id="email" class="form-control " formControlName="email" type="text" required>
+                </div>
+              </div><br>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="customerType">Customer Type</label>
+                <div class="col-sm-10">
+                  <select id="customerType" formControlName="customerType" class="form-select" aria-label="Default select example">
+                    <option *ngFor="let customerType of customerTypes" [ngValue]="customerType">{{customerType.name}}</option>
+                  </select>
+                </div>
+              </div><br>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="address">Address</label>
+                <div class="col-sm-10">
+                  <input id="address" class="form-control " formControlName="address" type="text" required>
+                </div>
+              </div><br>
+<!--              <div class="form-group row">-->
+<!--                <label class="col-sm-2 col-form-label"></label>-->
+<!--                <div class="col-sm-10">-->
+<!--                                    <button type="button" class="btn btn-primary" routerLink="/customer-list">Back</button>-->
+<!--                                    <button type="reset" class="btn btn-primary" >Reset form</button>-->
+<!--                                    <button type="submit" class="btn btn-primary">Submit</button>-->
+<!--                </div>-->
+<!--              </div>-->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>

@@ -34,7 +34,10 @@ export class CustomerCreateComponent implements OnInit {
   }
 
   onSubmit() {
-    this.customerService.save(this.createForm.value);
-    this.router.navigateByUrl('/customer');
+    console.log(this.createForm.value);
+    this.customerService.save(this.createForm.value).subscribe(next =>{
+      alert("them thanh cong");
+      this.router.navigateByUrl('/customer-list');
+    });
   }
 }
