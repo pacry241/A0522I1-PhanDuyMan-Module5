@@ -10,6 +10,7 @@ import { CustomerCreateComponent } from './component/customer/customer-create/cu
 import { NarbavComponent } from './component/narbav/narbav.component';
 import {HttpClientModule} from "@angular/common/http";
 import { CustomerEditComponent } from './component/customer/customer-edit/customer-edit.component';
+import { FacilityListComponent } from './component/facility/facility-list/facility-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CustomerEditComponent } from './component/customer/customer-edit/custom
     CustomerDetailComponent,
     CustomerCreateComponent,
     NarbavComponent,
-    CustomerEditComponent
+    CustomerEditComponent,
+    FacilityListComponent
   ],
     imports: [
         BrowserModule,
