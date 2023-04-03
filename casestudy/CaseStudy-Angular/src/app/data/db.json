@@ -163,6 +163,67 @@
       "name": "Member"
     }
   ],
+  "facilities": [
+    {
+      "id": 1,
+      "nameFacility": "Villa",
+      "acreage": 240,
+      "floor": 3,
+      "renter": 5,
+      "status": "Available",
+      "expense": 5000000,
+      "rentType": {
+        "id": 1,
+        "nameRentType": "Week",
+        "price": 100000
+      }
+    },
+    {
+      "id": 2,
+      "nameFacility": "House",
+      "acreage": 100,
+      "floor": 2,
+      "renter": 5,
+      "status": "Available",
+      "expense": 2000000,
+      "rentType": {
+        "id": 1,
+        "nameRentType": "Month",
+        "price": 100000
+      }
+    },
+    {
+      "id": 3,
+      "nameFacility": "Room",
+      "acreage": 100,
+      "floor": 1,
+      "renter": "4",
+      "status": "Available",
+      "expense": 1000000,
+      "rentType": {
+        "id": 1,
+        "nameRentType": "Day",
+        "price": 100000
+      }
+    }
+  ],
+  "rentType": [
+    {
+      "id": 1,
+      "nameRentType": "Day",
+      "price": 100000
+    },
+    {
+      "id": 2,
+      "nameRentType": "Week",
+      "price": 100000
+    },
+    {
+      "id": 3,
+      "nameRentType": "Month",
+      "price": 100000
+    }
+  ],
   "comments": [
     {
       "id": 1,

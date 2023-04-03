@@ -11,6 +11,8 @@ import { NarbavComponent } from './component/narbav/narbav.component';
 import {HttpClientModule} from "@angular/common/http";
 import { CustomerEditComponent } from './component/customer/customer-edit/customer-edit.component';
 import { FacilityListComponent } from './component/facility/facility-list/facility-list.component';
+import { FacilityCreateComponent } from './component/facility/facility-create/facility-create.component';
+import { FacilityEditComponent } from './component/facility/facility-edit/facility-edit.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FacilityListComponent } from './component/facility/facility-list/facili
     CustomerCreateComponent,
     NarbavComponent,
     CustomerEditComponent,
-    FacilityListComponent
+    FacilityListComponent,
+    FacilityCreateComponent,
+    FacilityEditComponent
   ],
     imports: [
         BrowserModule,

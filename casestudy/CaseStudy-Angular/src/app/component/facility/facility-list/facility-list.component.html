@@ -1,1 +1,35 @@
-<p>facility-list works!</p>
+<button class="btn btn-primary" routerLink="/facility-create">Add new facility</button>
+<table class="table table-hover">
+  <thead style="background: #48cfff">
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Acreage</th>
+    <th>Floors</th>
+    <th>Renter</th>
+    <th>Status</th>
+    <th>Expense</th>
+    <th>Rent Type</th>
+    <th>Price</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let facility of facilities; index as i">
+    <td>{{i}}</td>
+    <td>{{facility.nameFacility}}</td>
+    <td>{{facility.acreage}}</td>
+    <td>{{facility.floor}}</td>
+    <td>{{facility.renter}}</td>
+    <td>{{facility.status}}</td>
+    <td>{{facility.expense}}</td>
+    <td>{{facility.rentType.nameRentType}}</td>
+    <td>{{facility.rentType.price}}</td>
+    <td>
+      <button class="btn btn-primary"[routerLink]="['/facility-edit', facility.id]" >Edit</button>
+      <button class="btn btn-danger" (click)="removeFacility(facility.id)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
