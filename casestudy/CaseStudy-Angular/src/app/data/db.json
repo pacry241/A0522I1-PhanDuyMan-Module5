@@ -233,5 +233,185 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+
+  "level": [
+    {
+      "id": 1,
+      "nameLevel": "Đại học"
+    },
+    {
+      "id": 2,
+      "nameLevel": "Cao đẳng"
+    },
+    {
+      "id": 3,
+      "nameLevel": "Trung Cấp"
+    },
+    {
+      "id": 4,
+      "nameLevel": "Phổ thông"
+    },
+    {
+      "id": 5,
+      "nameLevel": "Người mới"
+    }
+  ],
+  "part": [
+    {
+      "idP": 1,
+      "namePart": "Phòng nhân sự"
+    },
+    {
+      "idP": 2,
+      "namePart": "Phòng kế toán"
+    },
+    {
+      "idP": 3,
+      "namePart": "Phòng tài chính"
+    },
+    {
+      "idP": 4,
+      "namePart": "Phòng tuyển dụng"
+    },
+    {
+      "idP": 5,
+      "namePart": "Phòng kỹ thuật"
+    }
+  ],
+  "location": [
+    {
+      "id": 1,
+      "namePosition": "Tiếp tân"
+    },
+    {
+      "id": 2,
+      "namePosition": "Bảo vệ"
+    },
+    {
+      "id": 3,
+      "namePosition": "Quản lý"
+    },
+    {
+      "id": 4,
+      "namePosition": "Phục vụ"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "image": "https://taimienphi.vn/tmp/cf/aut/UCJh-I6e5-pGG8-5NjT-O83K-mmJy-eZta-9nqH-anh-dai-dien-dep-cute-1.jpg",
+      "nameEmployee": "Nguyen A",
+      "dateOfBirth": "1985-11-24",
+      "idCard": "20181201633",
+      "salary": 5000000,
+      "phone": "0901950221",
+      "email": "nguyenA@gmail.com",
+      "address":"Đà Nẵng",
+      "level": {
+        "id": 1,
+        "nameLevel": "Đại học"
+      },
+      "location": {
+        "id": 3,
+        "namePosition": "Quản lý"
+      },
+      "part": {
+        "idP": 1,
+        "namePart": "Phòng nhân sự"
+      }
+    },
+    {
+      "id": 2,
+      "image": "https://inkythuatso.com/uploads/thumbnails/800/2022/03/anh-dai-dien-zalo-20-29-16-30-51.jpg",
+      "nameEmployee": "Nguyen B",
+      "dateOfBirth": "1985-11-24",
+      "idCard": "20181201633",
+      "salary": 8000000,
+      "phone": "0901950221",
+      "email": "nguyenA@gmail.com",
+      "address":"Đà Nẵng",
+      "level": {
+        "id": 1,
+        "nameLevel": "Đại học"
+      },
+      "location": {
+        "id": 3,
+        "namePosition": "Quản lý"
+      },
+      "part": {
+        "idP": 1,
+        "namePart": "Phòng nhân sự"
+      }
+    },
+    {
+      "id": 3,
+      "image": "https://thuthuatnhanh.com/wp-content/uploads/2019/12/avatar-deo-khau-trang-410x580.jpg",
+      "nameEmployee": "Nguyen C",
+      "dateOfBirth": "1985-11-24",
+      "idCard": "20181201633",
+      "salary": 5000000,
+      "phone": "0901950221",
+      "email": "nguyenA@gmail.com",
+      "address":"Đà Nẵng",
+      "level": {
+        "id": 1,
+        "nameLevel": "Đại học"
+      },
+      "location": {
+        "id": 3,
+        "namePosition": "Quản lý"
+      },
+      "part": {
+        "idP": 1,
+        "namePart": "Phòng nhân sự"
+      }
+    },
+    {
+      "id": 4,
+      "image": "https://taimienphi.vn/tmp/cf/aut/UCJh-I6e5-pGG8-5NjT-O83K-mmJy-eZta-9nqH-anh-dai-dien-dep-cute-1.jpg",
+      "nameEmployee": "Nguyen D",
+      "dateOfBirth": "1985-11-24",
+      "idCard": "20181201633",
+      "salary": 5000000,
+      "phone": "0901950221",
+      "email": "nguyenA@gmail.com",
+      "address":"Đà Nẵng",
+      "level": {
+        "id": 1,
+        "nameLevel": "Đại học"
+      },
+      "location": {
+        "id": 3,
+        "namePosition": "Quản lý"
+      },
+      "part": {
+        "idP": 1,
+        "namePart": "Phòng nhân sự"
+      }
+    },
+    {
+      "id": 5,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCUNpFn1dKAna2ldMIjV6BLhNNwDXmxR7vDFsp5AvjPA_uLpuqO4536WBZH5JuRLc61sc&usqp=CAU",
+      "nameEmployee": "Nguyen E",
+      "dateOfBirth": "1985-11-24",
+      "idCard": "20181201633",
+      "salary": 5000000,
+      "phone": "0901950221",
+      "email": "nguyenA@gmail.com",
+      "address":"Đà Nẵng",
+      "level": {
+        "id": 1,
+        "nameLevel": "Đại học"
+      },
+      "location": {
+        "id": 3,
+        "namePosition": "Quản lý"
+      },
+      "part": {
+        "idP": 1,
+        "namePart": "Phòng nhân sự"
+      }
+    }
+  ]
 }

@@ -15,6 +15,7 @@ export class CustomerListComponent implements OnInit {
   customers: Customer[]=[];
   createForm: FormGroup
   customerTypes: CustomerType[] = [];
+  p: number;
   constructor(private customerService: CustomerService,
               private router: Router,
               private customerTypeService: CustomerTypeService) {

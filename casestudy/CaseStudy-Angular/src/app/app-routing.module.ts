@@ -8,6 +8,9 @@ import {CustomerEditComponent} from "./component/customer/customer-edit/customer
 import {FacilityListComponent} from "./component/facility/facility-list/facility-list.component";
 import {FacilityCreateComponent} from "./component/facility/facility-create/facility-create.component";
 import {FacilityEditComponent} from "./component/facility/facility-edit/facility-edit.component";
+import {EmployeeListComponent} from "./component/employee/employee-list/employee-list.component";
+import {EmployeeDetailComponent} from "./component/employee/employee-detail/employee-detail.component";
+import {EmployeeEditComponent} from "./component/employee/employee-edit/employee-edit.component";
 
 
 const routes: Routes = [
@@ -17,7 +20,10 @@ const routes: Routes = [
   {path: 'edit/:id', component: CustomerEditComponent},
   {path: 'facilities', component: FacilityListComponent},
   {path: 'facility-create', component: FacilityCreateComponent},
-  {path: 'facility-edit/:id', component: FacilityEditComponent}
+  {path: 'facility-edit/:id', component: FacilityEditComponent},
+  {path: 'employee-list', component: EmployeeListComponent},
+  {path: 'employee/detail/:id', component: EmployeeDetailComponent},
+  {path:'employee/edit/:id', component:EmployeeEditComponent}
 ];
 
 @NgModule({

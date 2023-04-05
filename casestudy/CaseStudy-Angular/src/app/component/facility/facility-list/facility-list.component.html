@@ -15,7 +15,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let facility of facilities; index as i">
+  <tr *ngFor="let facility of facilities|paginate: { itemsPerPage: 2, currentPage: page }; index as i">
     <td>{{i}}</td>
     <td>{{facility.nameFacility}}</td>
     <td>{{facility.acreage}}</td>
@@ -32,4 +32,5 @@
   </tr>
   </tbody>
 </table>
+<pagination-controls (pageChange)="page=$event"></pagination-controls>
 

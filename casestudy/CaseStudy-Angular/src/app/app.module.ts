@@ -14,6 +14,11 @@ import { FacilityListComponent } from './component/facility/facility-list/facili
 import { FacilityCreateComponent } from './component/facility/facility-create/facility-create.component';
 import { FacilityEditComponent } from './component/facility/facility-edit/facility-edit.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { EmployeeListComponent } from './component/employee/employee-list/employee-list.component';
+import { EmployeeDetailComponent } from './component/employee/employee-detail/employee-detail.component';
+import { EmployeeCreateComponent } from './component/employee/employee-create/employee-create.component';
+import { EmployeeEditComponent } from './component/employee/employee-edit/employee-edit.component';
+import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
   declarations: [
@@ -26,13 +31,18 @@ import { FooterComponent } from './component/footer/footer.component';
     FacilityListComponent,
     FacilityCreateComponent,
     FacilityEditComponent,
-    FooterComponent
+    FooterComponent,
+    EmployeeListComponent,
+    EmployeeDetailComponent,
+    EmployeeCreateComponent,
+    EmployeeEditComponent
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
+      NgxPaginationModule
     ],
   providers: [],
   bootstrap: [AppComponent]

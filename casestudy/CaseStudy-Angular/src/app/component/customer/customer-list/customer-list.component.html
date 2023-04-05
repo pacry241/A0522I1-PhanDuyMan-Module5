@@ -19,7 +19,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let customer of customers; index as i">
+    <tr *ngFor="let customer of customers | paginate: { itemsPerPage: 5, currentPage: p }; index as i">
       <td>{{i}}</td>
       <td>{{customer.nameCustomer}}</td>
       <td>{{customer.dateOfBirth}}</td>
@@ -37,6 +37,7 @@
     </tr>
     </tbody>
   </table>
+  <pagination-controls (pageChange)="p=$event"></pagination-controls>
 </div>
 
 <!-- Modal create -->

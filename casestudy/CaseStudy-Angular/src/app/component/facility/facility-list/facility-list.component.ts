@@ -10,6 +10,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class FacilityListComponent implements OnInit {
   facilities: Facility[] = [];
+  page: number;
   constructor(private facilityService: FacilityService,
               private router: Router,
               private activatedRoute: ActivatedRoute) {
