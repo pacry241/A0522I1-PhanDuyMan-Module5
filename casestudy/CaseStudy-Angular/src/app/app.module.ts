@@ -19,6 +19,7 @@ import { EmployeeDetailComponent } from './component/employee/employee-detail/em
 import { EmployeeCreateComponent } from './component/employee/employee-create/employee-create.component';
 import { EmployeeEditComponent } from './component/employee/employee-edit/employee-edit.component';
 import {NgxPaginationModule} from "ngx-pagination";
+import { ContractListComponent } from './component/contract/contract-list/contract-list.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {NgxPaginationModule} from "ngx-pagination";
     EmployeeListComponent,
     EmployeeDetailComponent,
     EmployeeCreateComponent,
-    EmployeeEditComponent
+    EmployeeEditComponent,
+    ContractListComponent
   ],
     imports: [
         BrowserModule,

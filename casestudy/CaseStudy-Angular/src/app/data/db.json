@@ -139,6 +139,17 @@
         "name": "Member"
       },
       "address": "Da nang"
+    },
+    {
+      "id": 11,
+      "nameCustomer": "",
+      "dateOfBirth": "",
+      "gender": "",
+      "cmnd": "",
+      "phoneNumber": "",
+      "email": "",
+      "customerType": "",
+      "address": ""
     }
   ],
   "customer-type": [
@@ -234,7 +245,6 @@
   "profile": {
     "name": "typicode"
   },
-
   "level": [
     {
       "id": 1,
@@ -307,7 +317,7 @@
       "salary": 5000000,
       "phone": "0901950221",
       "email": "nguyenA@gmail.com",
-      "address":"Đà Nẵng",
+      "address": "Đà Nẵng",
       "level": {
         "id": 1,
         "nameLevel": "Đại học"
@@ -330,7 +340,7 @@
       "salary": 8000000,
       "phone": "0901950221",
       "email": "nguyenA@gmail.com",
-      "address":"Đà Nẵng",
+      "address": "Đà Nẵng",
       "level": {
         "id": 1,
         "nameLevel": "Đại học"
@@ -353,7 +363,7 @@
       "salary": 5000000,
       "phone": "0901950221",
       "email": "nguyenA@gmail.com",
-      "address":"Đà Nẵng",
+      "address": "Đà Nẵng",
       "level": {
         "id": 1,
         "nameLevel": "Đại học"
@@ -376,7 +386,7 @@
       "salary": 5000000,
       "phone": "0901950221",
       "email": "nguyenA@gmail.com",
-      "address":"Đà Nẵng",
+      "address": "Đà Nẵng",
       "level": {
         "id": 1,
         "nameLevel": "Đại học"
@@ -399,7 +409,7 @@
       "salary": 5000000,
       "phone": "0901950221",
       "email": "nguyenA@gmail.com",
-      "address":"Đà Nẵng",
+      "address": "Đà Nẵng",
       "level": {
         "id": 1,
         "nameLevel": "Đại học"

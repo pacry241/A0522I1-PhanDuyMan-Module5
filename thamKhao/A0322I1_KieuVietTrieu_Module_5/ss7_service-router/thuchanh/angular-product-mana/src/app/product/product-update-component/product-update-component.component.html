@@ -1,0 +1,26 @@
+<h1>Update {{product.id}} {{product.name}}</h1>
+
+  <table >
+    <tr>
+      <td>Mã sản phẩm:</td>
+      <td><input type="number" [(ngModel)]="product.id" disabled></td>
+    </tr>
+    <tr>
+      <td>Tên sản phẩm:</td>
+      <td><input type="text" [(ngModel)]="product.name"></td>
+    </tr>
+    <tr>
+      <td>Giá sản phẩm</td>
+      <td><input type="number" [(ngModel)]="product.price"></td>
+    </tr>
+    <tr>
+      <td>Mô tả về sản phẩm</td>
+      <td><input type="text" [(ngModel)]="product.description"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button (click)="submit()" type="submit">Tạo mới</button></td>
+    </tr>
+  </table>
+
+

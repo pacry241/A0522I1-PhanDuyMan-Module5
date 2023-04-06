@@ -1,0 +1,79 @@
+<form class="d-flex" [formGroup]="formSearch" (ngSubmit)="findByName()">
+  <input  class="form-control me-2" type="search" placeholder="Name Search" aria-label="Search" name="name" formControlName="name">
+<!--  <select name="nhaXe_id" formControlName="nhaXe_id">-->
+<!--    <option value="" selected>LoHang Search</option>-->
+<!--    <option *ngFor="let i of nhaXes" [ngValue]="i.id">-->
+<!--      {{i.name}}-->
+<!--    </option>-->
+<!--  </select>-->
+  <button class="btn btn-outline-success" type="submit">Search</button>
+  <button class="btn btn-outline-success" (click)="resetPage()">
+    Reset
+  </button>
+</form>
+
+<button type="button" class="btn btn-success mt-2 " routerLink="/create">Nhap hang</button>
+<h2 style="text-align: center; margin: 20px">Danh sách lo hang</h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Ma lo hang</th>
+    <th scope="col">Ten san pham</th>
+    <th scope="col">Gia tien</th>
+    <th scope="col">Don vi</th>
+    <th scope="col">So luong</th>
+    <th scope="col">Ngay nhap hang</th>
+    <th scope="col">Ngay san xuat</th>
+    <th scope="col">Ngay het han</th>
+    <th scope="col">Edit/Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let loHang of loHangs | paginate: config; index as i ">
+    <td scope="row">{{ loHang.id }}</td>
+    <td scope="row">{{ loHang.sanPham.name }}</td>
+    <td scope="row">{{ loHang.sanPham.giaTien }}</td>
+    <td scope="row">{{ loHang.sanPham.donVi }}</td>
+    <td scope="row">{{ loHang.soLuong }}</td>
+    <td scope="row">{{ loHang.ngayNhapHang }}</td>
+    <td scope="row">{{ loHang.ngaySanXuat }}</td>
+    <td scope="row">{{ loHang.ngayHetHan }}</td>
+    <td>
+      <button class="btn btn-warning">Edit</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal"
+              (click)="deleteInfo(loHang)">
+        Delete
+      </button>
+  </tr>
+  </tbody>
+</table>
+<!--Phân trang-->
+<pagination-controls (pageChange)="pageChanged($event)" previousLabel="Trang trước" nextLabel="Trang sau"></pagination-controls>
+
+
+
+<!--Modal Xóa-->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Xac nhan</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <span>Ban co chac chan muon xoa thong tin lo hang {{loHangDelelte.sanPham.name}}</span><br>
+        <span>nhap ngay {{loHangDelelte.ngayNhapHang}}?</span>
+<!--          Ban co chac chan muon xoa san pham nay?-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="deleteVeXe(loHangDelelte.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

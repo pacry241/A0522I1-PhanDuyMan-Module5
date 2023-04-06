@@ -34,6 +34,7 @@
       <td><div style="color: red" *ngIf="!reactiveForm.controls.age.valid && (reactiveForm.controls.age.dirty || reactiveForm.controls.age.touched)">
         <span *ngIf="reactiveForm.controls.age.hasError('required')">Hay nhap tuoi cua ban </span>
         <span *ngIf="reactiveForm.controls.age.hasError('min')">Tuoi cua ban khong phu hop</span>
+        <span *ngIf="reactiveForm.controls.age.hasError('notage')">not</span>
       </div>
       </td>
     </tr>

@@ -1,0 +1,12 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.block{
+  height: 150px;
+}
+
+.block-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gainsboro;
+}

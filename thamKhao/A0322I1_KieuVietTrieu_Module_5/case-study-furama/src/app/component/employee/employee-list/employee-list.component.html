@@ -1,0 +1,39 @@
+<button type="button" class="btn btn-success mt-2 " routerLink="/employee/create">New Employee</button>
+<h2 style="text-align: center; margin: 20px">List Employee</h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Name</th>
+    <th scope="col">Birthday</th>
+    <th scope="col">ID Card</th>
+    <th scope="col">Salary</th>
+    <th scope="col">Phone</th>
+    <th scope="col">Email</th>
+    <th scope="col">Address</th>
+    <th scope="col">Position</th>
+    <th scope="col">Education</th>
+    <th scope="col">Division</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let employee of employees; index as i">
+    <td scope="row">{{ employee.id }}</td>
+    <td scope="row">{{ employee.name }}</td>
+    <td scope="row">{{ employee.birthday }}</td>
+    <td scope="row">{{ employee.idCard }}</td>
+    <td scope="row">{{ employee.salary }}</td>
+    <td scope="row">{{ employee.phone }}</td>
+    <td scope="row">{{ employee.email }}</td>
+    <td scope="row">{{ employee.address }}</td>
+    <td scope="row">{{ employee.position.name }}</td>
+    <td scope="row">{{ employee.education.name }}</td>
+    <td scope="row">{{ employee.division.name }}</td>
+    <td><button [routerLink]="['/employee/edit', employee.id]" class="btn btn-warning">Edit</button>
+    <td><button (click)="checkDelete(employee.id)" class="btn btn-warning">Delete</button>
+  </tr>
+  </tbody>
+</table>
+

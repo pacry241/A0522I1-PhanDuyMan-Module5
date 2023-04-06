@@ -1,0 +1,132 @@
+{
+  "lohang": [
+    {
+      "id": "LH-0001",
+      "sanPham": {
+        "id": 1,
+        "name": "Sting",
+        "xuatXu": "Cong ty A",
+        "giaTien": 500,
+        "donVi": "Thung"
+      },
+      "soLuong": 6,
+      "ngayNhapHang": "2023-03-04",
+      "ngaySanXuat": "2023-03-04",
+      "ngayHetHan": "2023-03-04"
+    },
+    {
+      "id": "LH-0002",
+      "sanPham": {
+        "id": 1,
+        "name": "Sting",
+        "xuatXu": "Cong ty A",
+        "giaTien": 500,
+        "donVi": "Thung"
+      },
+      "soLuong": 5,
+      "ngayNhapHang": "2023-03-04",
+      "ngaySanXuat": "2023-03-04",
+      "ngayHetHan": "2023-03-04"
+    },
+    {
+      "id": "LH-0010",
+      "sanPham": {
+        "id": 2,
+        "name": "Tiger",
+        "xuatXu": "Cong ty C",
+        "giaTien": 2500,
+        "donVi": "Thung"
+      },
+      "soLuong": 2,
+      "ngayNhapHang": "2023-03-17",
+      "ngaySanXuat": "2023-03-25",
+      "ngayHetHan": "2023-03-26"
+    },
+    {
+      "id": "LH-0015",
+      "sanPham": {
+        "id": 1,
+        "name": "Sting",
+        "xuatXu": "Cong ty A",
+        "giaTien": 500,
+        "donVi": "Thung"
+      },
+      "soLuong": 5,
+      "ngayNhapHang": "2023-03-04",
+      "ngaySanXuat": "2023-03-04",
+      "ngayHetHan": "2023-03-04"
+    },
+    {
+      "id": "LH-0016",
+      "sanPham": {
+        "id": 2,
+        "name": "Tiger",
+        "xuatXu": "Cong ty C",
+        "giaTien": 2500,
+        "donVi": "Thung"
+      },
+      "soLuong": 2,
+      "ngayNhapHang": "2023-03-17",
+      "ngaySanXuat": "2023-03-25",
+      "ngayHetHan": "2023-03-26"
+    },
+    {
+      "id": "LH-1920",
+      "sanPham": {
+        "id": 4,
+        "name": "Dau goi",
+        "xuatXu": "Cong ty E",
+        "giaTien": 35500,
+        "donVi": "Thung"
+      },
+      "soLuong": 4,
+      "ngayNhapHang": "2023-03-12",
+      "ngaySanXuat": "2023-03-25",
+      "ngayHetHan": "2023-03-30"
+    },
+    {
+      "id": "LH-1999",
+      "sanPham": {
+        "id": 2,
+        "name": "Tiger",
+        "xuatXu": "Cong ty C",
+        "giaTien": 2500,
+        "donVi": "Thung"
+      },
+      "soLuong": 2,
+      "ngayNhapHang": "2023-03-04",
+      "ngaySanXuat": "2023-03-10",
+      "ngayHetHan": "2023-03-25"
+    }
+  ],
+  "sanpham": [
+    {
+      "id": 1,
+      "name": "Sting",
+      "xuatXu": "Cong ty A",
+      "giaTien": 500,
+      "donVi": "Thung"
+    },
+    {
+      "id": 2,
+      "name": "Tiger",
+      "xuatXu": "Cong ty C",
+      "giaTien": 2500,
+      "donVi": "Thung"
+    },
+    {
+      "id": 3,
+      "name": "Oshi",
+      "xuatXu": "Cong ty D",
+      "giaTien": 5000,
+      "donVi": "Thung"
+    },
+    {
+      "id": 4,
+      "name": "Dau goi",
+      "xuatXu": "Cong ty E",
+      "giaTien": 35500,
+      "donVi": "Thung"
+    }
+  ]
+}

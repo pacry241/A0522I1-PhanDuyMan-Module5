@@ -1,0 +1,324 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "name": "Tuấn Lê",
+      "birthday": "2023-03-24",
+      "gender": "nam",
+      "idCard": "asd",
+      "phone": "0766754226",
+      "email": "cumeo123@gmail.com",
+      "customerType": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "address": "Ha Noi"
+    },
+    {
+      "id": 2,
+      "name": "dat",
+      "birthday": "2023-03-18",
+      "gender": "nam",
+      "idCard": "asd",
+      "phone": "0766754226",
+      "email": "cumeo123@gmail.com",
+      "customerType": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "address": "Nha Trang"
+    },
+    {
+      "id": 3,
+      "name": "Phan Van Hai",
+      "birthday": "2023-03-01",
+      "gender": "Nam",
+      "idCard": "124354747",
+      "phone": "0918737774",
+      "email": "hai@gmail.com",
+      "customerType": {
+        "id": 5,
+        "name": "Member"
+      },
+      "address": "da nang"
+    },
+    {
+      "id": 4,
+      "name": "duyetngudot",
+      "birthday": "2023-03-18",
+      "gender": "nu",
+      "idCard": "kh09912",
+      "phone": "0766754226",
+      "email": "abd@gmail.com",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "address": "da nang"
+    },
+    {
+      "id": 5,
+      "name": "Hoang Ngoc",
+      "birthday": "2023-03-22",
+      "gender": "Nam",
+      "idCard": "123838",
+      "phone": "0842838383",
+      "email": "makak@gmail.com",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "address": "Quang Nam"
+    },
+    {
+      "id": 6,
+      "name": "Kiều Triều",
+      "birthday": "2023-03-18",
+      "gender": "Nam",
+      "idCard": "162636363",
+      "phone": "0943051861",
+      "email": "viettrieu123123@gmail.com",
+      "customerType": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "address": "Thăng Bình tỉnh Quảng Nam"
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinum"
+    },
+    {
+      "id": 3,
+      "name": "gold"
+    },
+    {
+      "id": 4,
+      "name": "silver"
+    },
+    {
+      "id": 5,
+      "name": "member"
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "name": "Tuan",
+      "birthday": "1995-10-05",
+      "idCard": "12312398980",
+      "salary": "123",
+      "phone": "0905872269",
+      "email": "giothoitb7@yahoo.com",
+      "address": "K69/8 Lý Thái Tổ ",
+      "position": {
+        "id": 2,
+        "name": "Phục vụ"
+      },
+      "education": {
+        "id": 2,
+        "name": "Cao đẳng"
+      },
+      "division": {
+        "id": 1,
+        "name": "Sale-Marketing"
+      }
+    },
+    {
+      "id": 2,
+      "name": "asd",
+      "birthday": "2022-12-16",
+      "idCard": "asd",
+      "salary": "322",
+      "phone": "4531233363",
+      "email": "taikuto@gmail.com",
+      "address": "asdsad",
+      "position": {
+        "id": 1,
+        "name": "Lễ tân"
+      },
+      "education": {
+        "id": 2,
+        "name": "Cao đẳng"
+      },
+      "division": {
+        "id": 2,
+        "name": "Hanh chinh"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Anh Phan",
+      "birthday": "2023-03-22",
+      "idCard": "17273373737",
+      "salary": "2626",
+      "phone": "016263636",
+      "email": "viettrieu123123@gmail.com",
+      "address": "Ha Noi",
+      "position": {
+        "id": 3,
+        "name": "Chuyên viên"
+      },
+      "education": {
+        "id": 1,
+        "name": "Trung cấp"
+      },
+      "division": {
+        "id": 2,
+        "name": "Hanh chinh"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Anh Hoang Ha",
+      "birthday": "2023-03-03",
+      "idCard": "0922263633",
+      "salary": "26373",
+      "phone": "013637373",
+      "email": "viettrieu123123@gmail.com",
+      "address": "Quang Nam",
+      "position": {
+        "id": 4,
+        "name": "Giám sát"
+      },
+      "education": {
+        "id": 1,
+        "name": "Trung cấp"
+      },
+      "division": {
+        "id": 2,
+        "name": "Hanh chinh"
+      }
+    }
+  ],
+  "facility": [
+    {
+      "id": 1,
+      "name": "Villa super Vip 11",
+      "area": 200,
+      "cost": 10,
+      "maxPeople": 5,
+      "standardRoom": "Vip",
+      "descriptionOtherConvenience": "vip",
+      "areaPool": 200,
+      "numberOfFloors": 2,
+      "freeService": "ssssss",
+      "rentType": {
+        "id": 2,
+        "name": "Moon"
+      },
+      "facilityType": {
+        "id": 3,
+        "name": "Room"
+      }
+    },
+    {
+      "id": 2,
+      "name": "ádasd",
+      "area": 123,
+      "cost": 123,
+      "maxPeople": "12312",
+      "standardRoom": "zxxzczxc",
+      "descriptionOtherConvenience": "ccccccccc",
+      "areaPool": 123,
+      "numberOfFloors": 12,
+      "freeService": "zxczxcxzc",
+      "rentType": {
+        "id": 2,
+        "name": "Moon"
+      },
+      "facilityType": {
+        "id": 3,
+        "name": "Room"
+      }
+    },
+    {
+      "id": 3,
+      "name": "duyetngu",
+      "area": 232,
+      "cost": 213123,
+      "maxPeople": "23213",
+      "standardRoom": "123",
+      "descriptionOtherConvenience": "kskskk",
+      "areaPool": 232,
+      "numberOfFloors": 213,
+      "freeService": "adsa",
+      "rentType": {
+        "id": 4,
+        "name": "Hour"
+      },
+      "facilityType": {
+        "id": 1,
+        "name": "Villa"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Đặc Biệt",
+      "area": 45,
+      "cost": 5000000,
+      "maxPeople": "30",
+      "standardRoom": "100",
+      "descriptionOtherConvenience": "abcxyz",
+      "areaPool": 50,
+      "numberOfFloors": 15,
+      "freeService": "abcxyz",
+      "rentType": {
+        "id": 2,
+        "name": "Moon"
+      },
+      "facilityType": {
+        "id": 3,
+        "name": "Room"
+      }
+    }
+  ],
+  "contract": [
+    {
+      "id": 1,
+      "customer": {
+        "id": 3,
+        "name": "Phan Van Hai",
+        "birthday": "2023-03-01",
+        "gender": "Nam",
+        "idCard": "124354747",
+        "phone": "0918737774",
+        "email": "hai@gmail.com",
+        "customerType": {
+          "id": 5,
+          "name": "Member"
+        },
+        "address": "da nang"
+      },
+      "facility": {
+        "id": 1,
+        "name": "Villa super Vip 11",
+        "area": 200,
+        "cost": 10,
+        "maxPeople": 5,
+        "standardRoom": "Vip",
+        "descriptionOtherConvenience": "vip",
+        "areaPool": 200,
+        "numberOfFloors": 2,
+        "freeService": "ssssss",
+        "rentType": {
+          "id": 2,
+          "name": "Moon"
+        },
+        "facilityType": {
+          "id": 3,
+          "name": "Room"
+        }
+      },
+      "dateIn": "2023-03-16",
+      "dateOut": "2023-03-18",
+      "deposit": 45
+    }
+  ]
+}

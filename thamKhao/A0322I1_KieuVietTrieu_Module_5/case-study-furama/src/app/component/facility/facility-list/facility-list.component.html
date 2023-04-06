@@ -1,0 +1,40 @@
+<button type="button" class="btn btn-success mt-2 " routerLink="/facility/create">New Facility</button>
+<h2 style="text-align: center; margin: 20px">List Facility</h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Name</th>
+    <th scope="col">Area</th>
+    <th scope="col">Cost</th>
+    <th scope="col">Max People</th>
+    <th scope="col">Standard Room</th>
+    <th scope="col">Description</th>
+    <th scope="col">Area Pool</th>
+    <th scope="col">NumberOfFloors</th>
+    <th scope="col">Free Service</th>
+    <th scope="col">RenType</th>
+    <th scope="col">FacilityType</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let facility of facilitys; index as i">
+    <td scope="row">{{ facility.id }}</td>
+    <td scope="row">{{ facility.name }}</td>
+    <td scope="row">{{ facility.area }}</td>
+    <td scope="row">{{ facility.cost }}</td>
+    <td scope="row">{{ facility.maxPeople }}</td>
+    <td scope="row">{{ facility.standardRoom }}</td>
+    <td scope="row">{{ facility.descriptionOtherConvenience }}</td>
+    <td scope="row">{{ facility.areaPool }}</td>
+    <td scope="row">{{ facility.numberOfFloors }}</td>
+    <td scope="row">{{ facility.freeService }}</td>
+    <td scope="row">{{ facility.rentType.name }}</td>
+    <td scope="row">{{ facility.facilityType.name }}</td>
+    <td><button [routerLink]="['/facility/edit', facility.id]" class="btn btn-warning">Edit</button>
+    <td><button (click)="checkDelete(facility.id)" class="btn btn-warning">Delete</button>
+  </tr>
+  </tbody>
+</table>
