@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <table class="table table-hover">
+    <thead style="background: #48cfff">
+    <tr>
+      <th>#</th>
+      <th>Mã sinh viên </th>
+      <th>Tên Sinh viên</th>
+      <th>Tên Nhóm</th>
+      <th>Tên Đề Tài</th>
+      <th>GV hướng dẫn</th>
+      <th>Email</th>
+      <th>Sdt</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let sinhVien of danhSachSinhVien | paginate: { itemsPerPage: 5, currentPage: p }; index as i">
+      <td>{{i+1}}</td>
+      <td>{{sinhVien.id}}</td>
+      <td>{{sinhVien.tenSV}}</td>
+      <td>{{sinhVien.tenNhom.tenNhom}}</td>
+      <td>{{sinhVien.tenDeTai}}</td>
+      <td>{{sinhVien.GVHD.tenGV}}</td>
+      <td>{{sinhVien.email}}</td>
+      <td>{{sinhVien.sdt}}</td>
+      <td>
+        <button class="btn btn-primary"[routerLink]="['/edit', sinhVien.id]" >Edit</button>
+        <button class="btn btn-danger" (click)="remove(sinhVien.id)">Delete</button>
+
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p=$event"></pagination-controls>
+</div>

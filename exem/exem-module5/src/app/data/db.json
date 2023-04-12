@@ -1,0 +1,94 @@
+{
+  "sinhvien": [
+    {
+      "id": 2,
+      "tenSV": "NguyenB",
+      "tenNhom": {
+        "id": 2,
+        "tenNhom": "Nhom 2"
+      },
+      "tenDeTai": "Toan Hoc",
+      "GVHD": {
+        "id": 2,
+        "tenGV": "Nguyen Thi Hang"
+      },
+      "email": "nguyenvanB@gmail.com",
+      "sdt": "0901950221"
+    },
+    {
+      "id": 3,
+      "tenSV": "Nguyen Van C",
+      "tenNhom": {
+        "id": 3,
+        "tenNhom": "Nhom 3"
+      },
+      "tenDeTai": "Hoa",
+      "GVHD": {
+        "id": 3,
+        "tenGV": "Nguyen Thi Lanh"
+      },
+      "email": "nguyenvanC@gmail.com",
+      "sdt": "0901950221"
+    },
+    {
+      "id": 4,
+      "tenSV": "Nguyen Van D",
+      "tenNhom": {
+        "id": 1,
+        "tenNhom": "Nhom 1"
+      },
+      "tenDeTai": "Vat ly",
+      "GVHD": {
+        "id": 1,
+        "tenGV": "Nguyen Thi Lan"
+      },
+      "email": "nguyenvanD@gmail.com",
+      "sdt": "0901950221"
+    }
+  ],
+  "giaovien": [
+    {
+      "id": 1,
+      "tenGV": "Nguyen Thi Lan"
+    },
+    {
+      "id": 2,
+      "tenGV": "Nguyen Thi Hang"
+    },
+    {
+      "id": 3,
+      "tenGV": "Nguyen Thi Lanh"
+    }
+  ],
+  "nhom": [
+    {
+      "id": 1,
+      "tenNhom": "Nhom 1"
+    },
+    {
+      "id": 2,
+      "tenNhom": "Nhom 2"
+    },
+    {
+      "id": 3,
+      "tenNhom": "Nhom 3"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

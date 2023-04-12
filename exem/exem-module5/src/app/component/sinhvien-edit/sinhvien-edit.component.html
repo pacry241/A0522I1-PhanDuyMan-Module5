@@ -1,0 +1,71 @@
+<h3>Chỉnh sửa thông tin của sinh viên {{sinhVien.tenSV}}</h3>
+<form [formGroup]="editForm" (ngSubmit)="onSave()">
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label " for="id">Mã SV :</label>
+    <div class="col-sm-10">
+      <input id="id" class="form-control " formControlName="id" type="text" disabled >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label " for="name">Ten Sinh Vien :</label>
+    <div class="col-sm-10">
+      <input id="name" class="form-control "  formControlName="tenSV" type="text">
+    </div>
+    <div class="col-sm-10">
+      <div style="color: red" *ngIf="!editForm.controls.tenSV.valid && (editForm.controls.tenSV.dirty || editForm.controls.tenSV.touched)">
+        <span *ngIf="editForm.controls.tenSV.hasError('required')">Nhập tên của bạn </span>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label" for="dateOfBirth">Ten De Tai :</label>
+    <div class="col-sm-10">
+      <input id="dateOfBirth" class="form-control "  formControlName="tenDeTai" type="text">
+    </div>
+    <div class="col-sm-10">
+      <div style="color: red" *ngIf="!editForm.controls.tenDeTai.valid && (editForm.controls.tenDeTai.dirty || editForm.controls.tenDeTai.touched)">
+        <span *ngIf="editForm.controls.tenDeTai.hasError('required')">Hãy nhập tên đề tài </span>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row ">
+    <label class="col-sm-2 col-form-label" for="email">Email :</label>
+    <div class="col-sm-10">
+      <input id="email" class="form-control "  formControlName="email" type="email" >
+    </div>
+    <div class="col-sm-10">
+      <div style="color: red" *ngIf="!editForm.controls.email.valid && (editForm.controls.email.dirty || editForm.controls.email.touched)">
+        <span *ngIf="editForm.controls.email.hasError('required')">Hay nhap email cua ban </span>
+        <span *ngIf="editForm.controls.email.hasError('email')">Email khong đúng. VD:a@.gmail.com</span>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row ">
+    <label class="col-sm-2 col-form-label" for="sdt">SDT :</label>
+    <div class="col-sm-10">
+      <input id="sdt" class="form-control "  formControlName="sdt" type="text" >
+    </div>
+    <div class="col-sm-10">
+      <div style="color: red" *ngIf="!editForm.controls.sdt.valid && (editForm.controls.sdt.dirty || editForm.controls.sdt.touched)">
+        <span *ngIf="editForm.controls.sdt.hasError('required')">Hay nhap so dien thoai cua ban </span>
+        <span *ngIf="editForm.controls.sdt.hasError('pattern')">So dien thoai cua ban khong dung</span>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label" for="giaovien">Giao Vien Huong Dan:</label>
+    <div class="col-sm-10">
+      <select id="giaovien" formControlName="GVHD" class="form-select" [compareWith]="compareFn">-->
+        <option *ngFor="let gvien of giaoVien" [ngValue]="gvien">{{gvien.tenGV}}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-10">
+      <button type="button" class="btn btn-primary" routerLink="/list">Trở về</button>
+      <button type="submit" class="btn btn-primary" >Lưu lại</button>
+    </div>
+  </div>
+</form>

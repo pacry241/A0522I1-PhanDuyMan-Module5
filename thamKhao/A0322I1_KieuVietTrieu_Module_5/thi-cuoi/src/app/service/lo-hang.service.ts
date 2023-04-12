@@ -33,7 +33,7 @@ export class LoHangService {
   }
 
   deleteById(id: string): Observable<LoHang> {
-    return this.httpClient.delete(`${this.url}/${id}`);
+    return this.httpClient.delete(z`${this.url}/${id}`);
   }
 
   findAllByName(name: string): Observable<LoHang[]> {
