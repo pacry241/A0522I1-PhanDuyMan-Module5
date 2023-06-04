@@ -1,4 +1,4 @@
-<h3>Chỉnh sửa thông tin của sinh viên {{sinhVien.tenSV}}</h3>
+<h3>Chỉnh sửa thông tin của sinh viên {{sinhVien.nameStudent}}</h3>
 <form [formGroup]="editForm" (ngSubmit)="onSave()">
   <div class="form-group row">
     <label class="col-sm-2 col-form-label " for="id">Mã SV :</label>
@@ -9,22 +9,22 @@
   <div class="form-group row">
     <label class="col-sm-2 col-form-label " for="name">Ten Sinh Vien :</label>
     <div class="col-sm-10">
-      <input id="name" class="form-control "  formControlName="tenSV" type="text">
+      <input id="name" class="form-control "  formControlName="nameStudent" type="text">
     </div>
     <div class="col-sm-10">
-      <div style="color: red" *ngIf="!editForm.controls.tenSV.valid && (editForm.controls.tenSV.dirty || editForm.controls.tenSV.touched)">
-        <span *ngIf="editForm.controls.tenSV.hasError('required')">Nhập tên của bạn </span>
+      <div style="color: red" *ngIf="!editForm.controls.nameStudent.valid && (editForm.controls.nameStudent.dirty || editForm.controls.nameStudent.touched)">
+        <span *ngIf="editForm.controls.nameStudent.hasError('required')">Nhập tên của bạn </span>
       </div>
     </div>
   </div>
   <div class="form-group row">
     <label class="col-sm-2 col-form-label" for="dateOfBirth">Ten De Tai :</label>
     <div class="col-sm-10">
-      <input id="dateOfBirth" class="form-control "  formControlName="tenDeTai" type="text">
+      <input id="dateOfBirth" class="form-control "  formControlName="nameTopic" type="text">
     </div>
     <div class="col-sm-10">
-      <div style="color: red" *ngIf="!editForm.controls.tenDeTai.valid && (editForm.controls.tenDeTai.dirty || editForm.controls.tenDeTai.touched)">
-        <span *ngIf="editForm.controls.tenDeTai.hasError('required')">Hãy nhập tên đề tài </span>
+      <div style="color: red" *ngIf="!editForm.controls.nameTopic.valid && (editForm.controls.nameTopic.dirty || editForm.controls.nameTopic.touched)">
+        <span *ngIf="editForm.controls.nameTopic.hasError('required')">Hãy nhập tên đề tài </span>
       </div>
     </div>
   </div>
@@ -43,20 +43,28 @@
   <div class="form-group row ">
     <label class="col-sm-2 col-form-label" for="sdt">SDT :</label>
     <div class="col-sm-10">
-      <input id="sdt" class="form-control "  formControlName="sdt" type="text" >
+      <input id="sdt" class="form-control "  formControlName="phoneNumber" type="text" >
     </div>
     <div class="col-sm-10">
-      <div style="color: red" *ngIf="!editForm.controls.sdt.valid && (editForm.controls.sdt.dirty || editForm.controls.sdt.touched)">
-        <span *ngIf="editForm.controls.sdt.hasError('required')">Hay nhap so dien thoai cua ban </span>
-        <span *ngIf="editForm.controls.sdt.hasError('pattern')">So dien thoai cua ban khong dung</span>
+      <div style="color: red" *ngIf="!editForm.controls.phoneNumber.valid && (editForm.controls.phoneNumber.dirty || editForm.controls.phoneNumber.touched)">
+        <span *ngIf="editForm.controls.phoneNumber.hasError('required')">Hay nhap so dien thoai cua ban </span>
+        <span *ngIf="editForm.controls.phoneNumber.hasError('pattern')">So dien thoai cua ban khong dung</span>
       </div>
     </div>
   </div>
   <div class="form-group row">
-    <label class="col-sm-2 col-form-label" for="giaovien">Giao Vien Huong Dan:</label>
+    <label class="col-sm-2 col-form-label" for="teacher">Giao Vien Huong Dan:</label>
     <div class="col-sm-10">
-      <select id="giaovien" formControlName="GVHD" class="form-select" [compareWith]="compareFn">-->
-        <option *ngFor="let gvien of giaoVien" [ngValue]="gvien">{{gvien.tenGV}}</option>
+      <select id="teacher" formControlName="teacher" class="form-select" [compareWith]="compareFn">-->
+        <option *ngFor="let gvien of giaoVien" [ngValue]="gvien">{{gvien.nameTeacher}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label" for="group">Nhóm :</label>
+    <div class="col-sm-10">
+      <select id="group" formControlName="group" class="form-select" [compareWith]="compareFn">-->
+        <option *ngFor="let group of groups" [ngValue]="group">{{group.nameGroup}}</option>
       </select>
     </div>
   </div>

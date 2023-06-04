@@ -10,6 +10,7 @@ import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { SinhvienComponent } from './sinhvien/sinhvien.component';
 import { SinhvienEditComponent } from './component/sinhvien-edit/sinhvien-edit.component';
+import { CreateStudentComponent } from './component/create-student/create-student.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SinhvienEditComponent } from './component/sinhvien-edit/sinhvien-edit.c
     HeaderComponent,
     FooterComponent,
     SinhvienComponent,
-    SinhvienEditComponent
+    SinhvienEditComponent,
+    CreateStudentComponent
   ],
   imports: [
     BrowserModule,

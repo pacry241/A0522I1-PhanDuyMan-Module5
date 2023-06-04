@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Sinhvien} from '../model/sinhvien';
-import {SinhvienService} from '../service/sinhvien.service';
+import {Student} from '../model/student';
+import {StudentService} from '../service/student.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
@@ -9,11 +9,11 @@ import {ActivatedRoute, Router} from '@angular/router';
   styleUrls: ['./sinhvien.component.css']
 })
 export class SinhvienComponent implements OnInit {
-  danhSachSinhVien: Sinhvien[] = [];
+  danhSachSinhVien: Student[] = [];
   p: number;
-  sinhVien: Sinhvien;
+  sinhVien: Student;
 
-  constructor(private sinhvienService: SinhvienService,
+  constructor(private sinhvienService: StudentService,
               private router: Router,
               private activatedRoute: ActivatedRoute) {
     this.sinhvienService.getAll().subscribe(data => {
@@ -49,7 +49,7 @@ export class SinhvienComponent implements OnInit {
     // });
   }
 
-  deleteInfo(sinhVien: Sinhvien) {
+  deleteInfo(sinhVien: Student) {
     this.sinhVien = sinhVien;
     console.log(this.sinhVien);
   }

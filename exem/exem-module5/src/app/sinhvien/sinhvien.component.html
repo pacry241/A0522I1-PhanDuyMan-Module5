@@ -17,12 +17,12 @@
     <tr *ngFor="let sinhVien of danhSachSinhVien | paginate: { itemsPerPage: 5, currentPage: p }; index as i">
       <td>{{i+1}}</td>
       <td>{{sinhVien.id}}</td>
-      <td>{{sinhVien.tenSV}}</td>
-      <td>{{sinhVien.tenNhom.tenNhom}}</td>
-      <td>{{sinhVien.tenDeTai}}</td>
-      <td>{{sinhVien.GVHD.tenGV}}</td>
+      <td>{{sinhVien.nameStudent}}</td>
+      <td>{{sinhVien.group.nameGroup}}</td>
+      <td>{{sinhVien.nameTopic}}</td>
+      <td>{{sinhVien.teacher.nameTeacher}}</td>
       <td>{{sinhVien.email}}</td>
-      <td>{{sinhVien.sdt}}</td>
+      <td>{{sinhVien.phoneNumber}}</td>
       <td>
         <button class="btn btn-primary"[routerLink]="['/edit', sinhVien.id]" >Edit</button>
         <button class="btn btn-danger" (click)="remove(sinhVien.id)">Delete</button>
